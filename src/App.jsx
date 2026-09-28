@@ -1,4 +1,10 @@
+
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
+import ProductList from "./components/ProductList";
+import CartItem from "./components/CartItem";
+import AboutUs from "./components/AboutUs";
+
 import "./App.css";
 
 function Home() {
@@ -20,24 +26,8 @@ function Home() {
           </Link>
         </div>
       </div>
-    </div>
-  );
-}
 
-function Plants() {
-  return (
-    <div className="products-page">
-      <h1>Paradise Nursery Plants</h1>
-      <p>Explore our collection of beautiful houseplants.</p>
-    </div>
-  );
-}
-
-function Cart() {
-  return (
-    <div className="cart-page">
-      <h1>Shopping Cart</h1>
-      <p>Your selected plants will appear here.</p>
+      <AboutUs />
     </div>
   );
 }
@@ -47,8 +37,16 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/plants" element={<Plants />} />
-        <Route path="/cart" element={<Cart />} />
+
+        <Route
+          path="/plants"
+          element={<ProductList />}
+        />
+
+        <Route
+          path="/cart"
+          element={<CartItem />}
+        />
       </Routes>
     </BrowserRouter>
   );

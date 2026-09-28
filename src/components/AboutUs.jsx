@@ -1,4 +1,4 @@
-```jsx
+
 function AboutUs() {
   return (
     <section className="about-us">
@@ -20,4 +20,3 @@ function AboutUs() {
 }
 
 export default AboutUs;
-```
